@@ -1,6 +1,78 @@
+//Preload
 .preload(data-preaload='')
     .container 
         .row 
             .preload__content 
                 .preload__circle 
                 p.preload__text Grilli
+
+
+//Top bar
+
+.topbar 
+    .topbar__content
+        .topbar__left
+            .wrapper
+                i.ri-map-pin-line
+                p.p-4 Restaurant St, Delicious City, London 9578, UK
+            .wrapper 
+                i.ri-time-line
+                p.p-4 Daily : 8.00 am to 10.00 pm 
+        .topbar__right 
+            .wrapper 
+                i.ri-phone-line
+                p.p-4  +1 123 456 7890
+            .wrapper 
+                i.ri-mail-line   
+                p.p-4 booking@restaurant.com
+
+//Header Navbar
+
+header.header
+    .container 
+        .row 
+            .header__content 
+                .header__logo 
+                    a.logo(href="") 
+                        img(src="/assets/img/logo.svg", alt="")
+
+                .menu.active(data-navbar="")
+                    .menu__logo 
+                         a.logo(href="") 
+                            img(src="/assets/img/logo.svg", alt="")
+
+                    .menu-close-btn 
+                        i.ri-close-line   
+
+                    .menu__list      
+                        .menu__item 
+                            a(href="#" data-nav-link="") Home
+                        .menu__item 
+                            a(href="#menus" data-nav-link="") Menus
+                        .menu__item 
+                            a(href="#about-us" data-nav-link="") About Us
+                        .menu__item 
+                            a(href="#our-chefs" data-nav-link="") Our Chefs
+                        .menu__item 
+                            a(href="#contact" data-nav-link="") Contact    
+
+                    .navbar__wrapper 
+                        h4.navbar__title Visit Us
+                        p.navbar__p Restaurant St, Delicious City,
+                        p.navbar__p London 9578, UK
+                        p.navbar__p Open: 9.30 am - 2.30pm
+                        p.navbar__link  
+                            a(href="") booking@grilli.com
+                        h4.navbar__subtitle Booking Request
+                        p.navabr__number +88-123-123456
+
+                .header__buttons 
+                    .btn.btn__header
+                        span Find A Table 
+                    .nav-open-btn(data-nav-toggler="")
+                        span.line.line-1 
+                        span.line.line-2 
+                        span.line.line-3 
+
+
+    
