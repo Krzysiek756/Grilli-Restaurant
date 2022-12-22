@@ -1,13 +1,15 @@
+//reset layout
+
+
+@import 'reset';
+@import 'breakpoints';
+
 //variables & function
 @import 'variables';
 @import 'base';
 
-//reset layout
-@import 'reset';
-@import 'breakpoints';
 
 //mixins
-
 @import 'mixins';
 
 
