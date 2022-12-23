@@ -83,7 +83,7 @@
 /********************After Rotate Square**********************/
 
 
-@mixin rotate-square {
+@mixin rotate-square() {
     &::after {
         content: '';
         position: absolute;
@@ -98,4 +98,30 @@
 
         transform: translate(0, 50%) rotate(45deg);
     }
+}
+
+
+/********************Hover two lines bottom**********************/
+
+
+@mixin hover-two-lines {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 5px;
+        border-block: 1px solid $gold-crayola;
+        transform: scaleX(0.2);
+        opacity: 0;
+        transition: $transition-2;
+
+    }
+
+    &:is(:hover, :focus-visible)::after {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
 }

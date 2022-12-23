@@ -36,13 +36,14 @@ header.header
                     a.logo(href="") 
                         img(src="/assets/img/logo.svg", alt="")
 
-                .menu.active(data-navbar="")
+                .menu(data-navbar="")
                     .menu__logo 
                          a.logo(href="") 
                             img(src="/assets/img/logo.svg", alt="")
 
-                    .menu__close-btn 
-                        i.ri-close-line   
+                    .menu__close-btn(data-nav-toggler='')       
+                        i.ri-close-line 
+                          
 
                     .menu__list      
                         .menu__item.active 
@@ -65,7 +66,7 @@ header.header
                         p.navbar__link  
                             a(href="") booking@grilli.com
                         h4.navbar__subtitle Booking Request
-                        p.navabr__number +88-123-123456
+                        p.navbar__number +88-123-123456
 
                 .header__buttons 
                     .btn.btn__header
@@ -73,7 +74,8 @@ header.header
                     .nav-open-btn(data-nav-toggler="")
                         span.line.line-1 
                         span.line.line-2 
-                        span.line.line-3 
-
+                        span.line.line-3                      
+                .overlay(data-nav-toggler='',data-overlay="")       
+                
 
     
