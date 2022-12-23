@@ -15,6 +15,7 @@
             .wrapper
                 i.ri-map-pin-line
                 p.p-4 Restaurant St, Delicious City, London 9578, UK
+            .separator    
             .wrapper 
                 i.ri-time-line
                 p.p-4 Daily : 8.00 am to 10.00 pm 
@@ -22,13 +23,14 @@
             .wrapper 
                 i.ri-phone-line
                 p.p-4  +1 123 456 7890
+            .separator    
             .wrapper 
                 i.ri-mail-line   
                 p.p-4 booking@restaurant.com
 
 //Header Navbar
 
-header.header
+header.header(data-header="")
     .container 
         .row 
             .header__content 
@@ -69,13 +71,12 @@ header.header
                         p.navbar__number +88-123-123456
 
                 .header__buttons 
-                    .btn.btn__header
-                        span Find A Table 
+                    .btn.btn--header
+                        span.text.text-1 Find A Table
+                        span.text.text-2(aria-hidden='true') Find A Table
                     .nav-open-btn(data-nav-toggler="")
                         span.line.line-1 
                         span.line.line-2 
                         span.line.line-3                      
-                .overlay(data-nav-toggler='',data-overlay="")       
-                
+                .overlay(data-nav-toggler='',data-overlay="") 
 
-    

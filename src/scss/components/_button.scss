@@ -1,0 +1,70 @@
+.btn {
+    position: relative;
+    color: $gold-crayola;
+    font-size: $fontSize-label-2;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    letter-spacing: $letterSpacing-5;
+    max-width: max-content;
+    border: 2px solid $gold-crayola;
+    padding: 12px 45px;
+    overflow: hidden;
+    z-index: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+
+
+    &--header {
+
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: 'sasfasd';
+            bottom: 100%;
+            left: 50%;
+            width: 200%;
+            transform: translateX(-50%);
+            height: 200%;
+            border-radius: $radius-circle;
+            background-color: $gold-crayola;
+            transition: $transition-2;
+            z-index: -1;
+
+
+
+        }
+
+
+        .text {
+            transition: $transition-1;
+        }
+
+        .text-2 {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: max-content;
+            color: $smoky-black-1;
+        }
+
+        &:is(:hover, :focus-visible)::before {
+            bottom: -50%;
+        }
+
+        &:is(:hover, :focus-visible) .text-1 {
+            transform: translateY(-40px);
+        }
+
+        &:is(:hover, :focus-visible) .text-2 {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}

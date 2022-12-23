@@ -18,7 +18,7 @@
 
     &>* {
         transition: $transition-1;
-        transition-delay: 650ms;
+        transition-delay: 250ms;
     }
 
     &.loaded>* {
@@ -27,8 +27,9 @@
     }
 
     &.loaded {
-        transition-delay: 650ms;
+        transition-delay: 250ms;
         transform: translateY(100%);
+
     }
 
 
@@ -108,8 +109,35 @@
 /**********************Section Top Bar**********************/
 
 
-.topbar {
+//Separator
 
+.separator {
+
+    position: relative;
+
+    display: none;
+
+    @include xl {
+        @include rotate-square;
+
+        display: flex;
+
+        margin: 0 50px;
+
+
+        &::after {
+            transform: translate(50%, 50%) rotate(45deg);
+            left: -10px;
+        }
+
+
+
+    }
+
+
+}
+
+.topbar {
 
 
     &__content {
@@ -120,12 +148,14 @@
         height: fit-content;
 
 
+
+
         @include sm {
             &::before {
                 position: absolute;
                 content: '';
                 background-color: $davys-grey;
-                width: calc(100% + 32px);
+                width: calc(100% + 30px); ////// ??????????????
                 margin-left: -15px;
                 height: 1px;
                 bottom: -12px;
@@ -142,6 +172,8 @@
 
         @include lg {
             justify-content: space-between;
+
+
         }
 
 
@@ -154,13 +186,17 @@
         display: flex;
         gap: 30px;
 
+        position: relative;
+
         @include lg {
-            gap: 10px;
+            gap: 30px;
         }
 
         @include xl {
-            gap: 30px;
+            gap: 0px;
         }
+
+
 
         .wrapper {
             display: flex;
@@ -204,6 +240,7 @@
 
         }
 
+
     }
 
     &__right {
@@ -238,18 +275,54 @@
 
     position: fixed;
     width: 100%;
+    top: -1px;
+    left: 0;
+    background-color: transparent;
+    z-index: 4;
+    border-block-end: 1px solid transparent;
+    transition: $transition-1;
+
+
+    &.hide {
+        transform: translateY(-100%);
+        transition-delay: 250ms;
+    }
+
+    &.active {
+        background-color: $eerie-black-4;
+        border-color: $black-alpha-15;
+
+
+
+
+        .header__content {
+
+
+            margin: 14px 20px;
+
+            @include sm {
+                margin: 20px 20px;
+            }
+
+
+        }
+
+
+
+
+    }
 
     .container {
         max-width: unset;
     }
 
     &__content {
-        margin: 20px 20px;
+        margin: 40px 20px;
 
         width: 100%;
 
         @include sm {
-            margin: 40px 20px
+            margin: 100px 20px
         }
 
 
@@ -479,8 +552,18 @@
     &__buttons {
 
 
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+
         .btn {
             display: none;
+
+
+            @include md {
+                display: flex;
+            }
         }
 
 
@@ -488,6 +571,7 @@
         .nav-open-btn {
 
             cursor: pointer;
+
 
 
             .line {
