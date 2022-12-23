@@ -259,8 +259,8 @@
     }
 
     .menu {
-        position: absolute;
-        top: -22px;
+        position: fixed;
+        top: 0;
         left: -360px;
         height: 100vh;
         width: 360px;
@@ -271,16 +271,106 @@
         display: flex;
         flex-direction: column;
 
+        overflow-y: scroll;
+
+
         transition: $transition-2;
+        z-index: 10;
 
         &.active {
             transition: $transition-2;
             transform: translateX(360px);
         }
 
+        &__logo {
+            align-self: center;
+            margin: 80px 0;
 
-        @include sm {
-            top: -52px;
+
+        }
+
+        &__close-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+
+            cursor: pointer;
+
+
+            i {
+                font-size: 20px;
+                border: 1px solid $white;
+                border-radius: 50%;
+                padding: 2px;
+                transition: $transition-1;
+
+                &:hover {
+                    transition: $transition-1;
+                    color: $gold-crayola;
+                    border-color: $gold-crayola;
+
+                }
+
+            }
+
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+
+
+            margin-bottom: 80px;
+
+            text-transform: uppercase;
+            font-size: $fontSize-body-4;
+
+
+            border-block-end: 1px solid $white-alpha-20;
+
+        }
+
+        &__item {
+
+            transition: $transition-1;
+
+            border-block-start: 1px solid $white-alpha-20;
+            padding-block: 10px;
+
+
+            a {
+                position: relative;
+                transition: $transition-1;
+
+                &:hover {
+                    color: $gold-crayola;
+                    padding-left: 25px;
+                    transition: $transition-1;
+
+                    @include rotate-square;
+                }
+
+
+            }
+
+            &.active {
+
+                color: $gold-crayola;
+
+                a {
+
+                    position: relative;
+                    padding-left: 25px;
+
+                    @include rotate-square;
+                }
+
+            }
+
+
+
+
+
         }
 
 
