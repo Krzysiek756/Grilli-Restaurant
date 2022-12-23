@@ -22,6 +22,12 @@
 
         position: relative;
 
+        background-color: $gold-crayola;
+
+        color: $smoky-black-1;
+
+
+
         &::before {
             position: absolute;
             content: 'sasfasd';
@@ -31,10 +37,9 @@
             transform: translateX(-50%);
             height: 200%;
             border-radius: $radius-circle;
-            background-color: $gold-crayola;
+            background-color: $smoky-black-1;
             transition: $transition-2;
             z-index: -1;
-
 
 
         }
@@ -50,7 +55,7 @@
             left: 50%;
             transform: translateX(-50%);
             min-width: max-content;
-            color: $smoky-black-1;
+            color: $white;
         }
 
         &:is(:hover, :focus-visible)::before {
