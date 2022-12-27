@@ -155,7 +155,7 @@
                 position: absolute;
                 content: '';
                 background-color: $davys-grey;
-                width: calc(100% + 30px); ////// ??????????????
+                width: calc(100% + 30px);
                 margin-left: -15px;
                 height: 1px;
                 bottom: -12px;
@@ -648,7 +648,7 @@
             display: none;
 
 
-            @include md {
+            @include sm {
                 display: flex;
             }
         }

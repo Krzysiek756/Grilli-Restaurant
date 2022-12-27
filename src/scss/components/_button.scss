@@ -8,6 +8,7 @@
     max-width: max-content;
     border: 2px solid $gold-crayola;
     padding: 12px 45px;
+    min-height: 58px;
     overflow: hidden;
     z-index: 1;
 
@@ -18,7 +19,10 @@
 
 
 
-    &--header {
+
+
+    &--header,
+    &--hero {
 
         position: relative;
 
@@ -30,7 +34,7 @@
 
         &::before {
             position: absolute;
-            content: 'sasfasd';
+            content: '';
             bottom: 100%;
             left: 50%;
             width: 200%;
@@ -72,4 +76,27 @@
         }
 
     }
+
+
+    &--hero {
+
+        background-color: transparent;
+        color: $gold-crayola;
+
+
+        position: sticky;
+
+        .text-2 {
+            color: $smoky-black-1;
+        }
+
+
+        &::before {
+            background-color: $gold-crayola;
+
+        }
+    }
+
+
+
 }
