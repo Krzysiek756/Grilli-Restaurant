@@ -24,7 +24,6 @@
 
 
 
-
     &__slider {
         display: flex;
         flex-direction: column;
@@ -43,6 +42,8 @@
         text-align: center;
 
         opacity: 0;
+        visibility: hidden;
+
 
         padding: 150px 0;
 
@@ -56,6 +57,8 @@
         width: 100%;
 
 
+
+
         z-index: -1;
 
 
@@ -64,10 +67,27 @@
 
 
 
-
         &.active {
             opacity: 1;
             visibility: visible;
+            animation: smoothScale 7s linear forwards;
+
+
+
+            @keyframes smoothScale {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(1.15);
+
+
+                }
+
+
+            }
+
         }
     }
 
@@ -91,6 +111,7 @@
             font-size: 1.2rem;
             letter-spacing: $letterSpacing-2;
             margin-bottom: 20px;
+
 
             margin-top: 80px;
 
