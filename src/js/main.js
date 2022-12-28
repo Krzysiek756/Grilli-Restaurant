@@ -123,7 +123,6 @@ window.addEventListener("scroll", function () {
 
 
 // //Auto Slide
-
 // let autoSlideInterval;
 
 // const autoSlide = function () {
