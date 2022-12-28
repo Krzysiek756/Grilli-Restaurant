@@ -64,12 +64,29 @@
 
     }
 
+
+
     &__bg {
 
         background-image: url('/assets/img/hero-slider-1.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        :nth-child(1) {
+            background-image: url('/assets/img/hero-slider-1.jpg');
+        }
+
+        :nth-child(2) {
+            background-image: url('/assets/img/hero-slider-2.jpg');
+        }
+
+
+
+        :nth-child(3) {
+            background-image: url('/assets/img/hero-slider-3.jpg');
+        }
+
 
 
         position: absolute;
@@ -111,6 +128,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+
+        @include md {
+
+            transform: scale(0.8);
+            bottom: 40px;
+
+        }
+
+        @include lg {
+            transform: scale(1);
+            bottom: 60px;
+
+        }
 
         &::after {
             position: absolute;
@@ -256,12 +288,13 @@
 
             @include md {
                 font-size: 7rem;
+                max-width: 580px;
 
             }
 
             @include lg {
                 font-size: 10rem;
-                max-width: 650px;
+                max-width: 780px;
                 margin-bottom: 20px;
             }
 
