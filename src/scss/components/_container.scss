@@ -52,9 +52,6 @@
 
 
 
-
-
-
     &__slider {
         display: flex;
         flex-direction: column;
@@ -73,19 +70,6 @@
         background-size: cover;
         background-repeat: no-repeat;
 
-        :nth-child(1) {
-            background-image: url('/assets/img/hero-slider-1.jpg');
-        }
-
-        :nth-child(2) {
-            background-image: url('/assets/img/hero-slider-2.jpg');
-        }
-
-
-
-        :nth-child(3) {
-            background-image: url('/assets/img/hero-slider-3.jpg');
-        }
 
 
 
@@ -109,7 +93,17 @@
 
         @include smoothScale;
 
+        &--2 {
+            background-image: url('/assets/img/hero-slider-2.jpg');
+        }
+
+        &--3 {
+            background-image: url('/assets/img/hero-slider-3.jpg');
+        }
+
+
     }
+
 
     &__image {
 
@@ -187,6 +181,8 @@
 
 
 
+
+
         position: absolute;
         top: 0;
         left: 50%;
@@ -241,6 +237,27 @@
 
     &__button {
         display: none;
+
+
+        @include md {
+            display: inline-flex;
+            height: fit-content;
+            justify-content: space-between;
+            flex-direction: row;
+            width: calc(100% - 40px);
+
+            margin: 0 20px;
+
+            position: absolute;
+
+            top: 50%;
+
+        }
+
+        @include xl {
+            margin: 0 30px;
+            width: calc(100% - 60px);
+        }
     }
 
 
@@ -256,14 +273,21 @@
             margin-bottom: 20px;
 
 
-            margin-top: 80px;
+            margin-top: 70px;
 
             @include sm {
                 margin-bottom: 20px;
+
+
             }
 
             @include md {
                 font-size: 1.6rem;
+                margin-top: 140px;
+            }
+
+            @include lg {
+                margin-top: 80px;
             }
 
             &::after {
@@ -293,15 +317,21 @@
             }
 
             @include lg {
-                font-size: 10rem;
-                max-width: 780px;
+                max-width: 880px;
                 margin-bottom: 20px;
             }
 
             @include xl {
-                font-size: 12rem;
-                max-width: 750px;
+                font-size: 10rem;
+
             }
+
+            @include xxl {
+                font-size: 12rem;
+                max-width: 980px;
+
+            }
+
 
 
         }
@@ -320,6 +350,8 @@
 
 
     }
+
+
 
 
 

@@ -98,5 +98,44 @@
     }
 
 
+    &--slider {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 12px 12px;
+        transform: translateY(-50%) rotate(45deg) scale(0.6);
+
+
+        @include xl {
+            transform: translateY(-50%) rotate(45deg) scale(0.8);
+        }
+
+        transition: $transition-2;
+
+
+        i {
+            font-size: 28px;
+            transform: rotate(-45deg);
+
+            @include xl {
+                transform: scale(1.2) rotate(-45deg);
+
+            }
+        }
+
+        &:hover {
+            transition: $transition-2;
+
+            background-color: $gold-crayola;
+
+            i {
+                color: $black;
+            }
+        }
+    }
+
+
 
 }
