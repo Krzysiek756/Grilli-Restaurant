@@ -9,6 +9,8 @@
 
 
 
+
+
     @include sm {
         margin-top: -54px;
     }
@@ -18,6 +20,11 @@
 
     .container {
         max-width: unset;
+    }
+
+
+    &__content {
+        overflow: hidden;
     }
 
 
@@ -35,6 +42,51 @@
 
     }
 
+    &__bg {
+
+        background: url('/assets/img/hero-slider-2.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 0;
+        top: -50px;
+
+        background-color: red;
+        width: 100%;
+        height: 100vh;
+
+        z-index: -1;
+
+
+        @keyframes smoothScale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.15);
+
+
+            }
+
+
+        }
+    }
+
+    &__image {
+        position: absolute;
+        z-index: 2;
+        bottom: 15px;
+        right: 15px;
+        background-color: $gold-crayola;
+        height: fit-content;
+        width: 110px;
+        height: 110px;
+        padding: 12px;
+    }
+
     &__slide {
         display: flex;
         flex-direction: column;
@@ -45,47 +97,22 @@
         visibility: hidden;
 
 
-        padding: 150px 0;
+        padding: 120px 0;
 
 
 
 
-        background: url('/assets/img/hero-slider-1.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-
-
-
-
-        z-index: -1;
-
-
-        position: absolute;
-        left: 0;
 
 
 
         &.active {
             opacity: 1;
             visibility: visible;
-            animation: smoothScale 7s linear forwards;
 
 
 
-            @keyframes smoothScale {
-                0% {
-                    transform: scale(1);
-                }
-
-                100% {
-                    transform: scale(1.15);
-
-
-                }
-
-
+            .hero__bg {
+                animation: smoothScale 7s linear forwards;
             }
 
         }
@@ -146,9 +173,11 @@
             font-size: $fontSize-body-2;
             text-align: unset;
             margin-bottom: 60px;
+            min-width: 400px;
 
             @include sm {
                 font-size: 2.2rem;
+
             }
         }
 
