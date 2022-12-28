@@ -1,3 +1,14 @@
+.slider-reveal {
+    transform: translateY(30px);
+    opacity: 0;
+
+    @include sliderReveal;
+
+}
+
+
+
+
 /***************************Section Hero******************************/
 /***************************Section Hero******************************/
 /***************************Section Hero******************************/
@@ -23,9 +34,6 @@
     .container {
         max-width: unset;
     }
-
-
-
 
 
 
@@ -67,31 +75,53 @@
         z-index: -1;
 
 
-        @keyframes smoothScale {
-            0% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1.15);
+        @include smoothScale;
 
 
-            }
-
-
-        }
     }
+
+
 
     &__image {
         position: absolute;
         z-index: 2;
-        bottom: 15px;
-        right: 15px;
+        bottom: 10px;
+        right: 56px;
         background-color: $gold-crayola;
         height: fit-content;
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
         padding: 12px;
+        transform: scale(0.6);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-inline: auto;
+            margin-block-end: 8px;
+        }
+
+        span {
+            font-size: 1.6rem;
+            color: $black;
+            font-weight: $weight-bold;
+            text-transform: uppercase;
+            letter-spacing: $letterSpacing-1;
+            line-height: $lineHeight-2;
+            text-align: center;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            border: 1px solid $gold-crayola;
+            animation: rotate360 15s linear infinite;
+        }
+
+        @include rotate360;
     }
 
     &__slide {
@@ -104,7 +134,7 @@
         visibility: hidden;
 
 
-        padding: 120px 0;
+        padding: 125px 0;
 
 
 
@@ -117,10 +147,35 @@
             visibility: visible;
 
 
-
+            //Aniamtion
             .hero__bg {
                 animation: smoothScale 7s linear forwards;
             }
+
+            .slider-reveal {
+                animation: sliderReveal 1s ease forwards;
+            }
+
+            .slide__subtitle {
+                animation-delay: 500ms;
+            }
+
+            .slide__title {
+                animation-delay: 1000ms;
+
+            }
+
+            .slide__p {
+                animation-delay: 1500ms;
+            }
+
+            .btn {
+                animation-delay: 2000ms;
+            }
+
+
+
+
 
         }
     }
@@ -129,11 +184,6 @@
         display: none;
     }
 
-    .img-cover {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
     .slide {
 
