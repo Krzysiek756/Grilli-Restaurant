@@ -65,7 +65,7 @@
 
     &__bg {
 
-        background-image: url('/assets/img/hero-slider-1.jpg');
+        background-image: url('../img/hero-slider-1.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -94,11 +94,11 @@
         @include smoothScale;
 
         &--2 {
-            background-image: url('/assets/img/hero-slider-2.jpg');
+            background-image: url('../assets/img/hero-slider-2.jpg');
         }
 
         &--3 {
-            background-image: url('/assets/img/hero-slider-3.jpg');
+            background-image: url('../img/hero-slider-3.jpg');
         }
 
 
@@ -291,7 +291,7 @@
             }
 
             &::after {
-                content: url('/assets/img/separator.svg');
+                content: url('../img/separator.svg');
                 display: block;
                 margin: 20px 0;
                 width: 100px;
