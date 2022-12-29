@@ -20,8 +20,9 @@
 
 
 
-
     .section {
+
+
 
         &__subtitle {
             color: $gold-crayola;
@@ -438,10 +439,15 @@
 
 .offer {
 
+
+
     &__content {
 
         @include flex-center(column);
-        gap: 60px;
+
+        overflow-x: hidden;
+
+
 
     }
 
@@ -449,15 +455,46 @@
         @include flex-center(column);
         width: 100%;
 
+        margin-bottom: 60px;
+
+
+
+
+
     }
 
 
     &__img {
         margin-bottom: 60px;
-        overflow: hidden;
-
 
         @include img-max-wh(cover);
+
+        @include shane-hover;
+
+        @include rotate-hover;
+
+
+        max-width: 388px;
+        max-height: 460px;
+
+
+
+
+        img {
+
+
+
+            transition: $transition-2;
+            transform: scale(1);
+
+            &:hover {
+                transition: $transition-2;
+
+                transform: scale(1.05);
+            }
+
+        }
+
     }
 
     &__title {
@@ -466,13 +503,13 @@
 
     &__link {
         color: $gold-crayola;
-        padding-block-end: 4px;
         margin-inline: auto;
         text-transform: uppercase;
         letter-spacing: $letterSpacing-3;
         font-weight: $weight-bold;
         transition: $transition-1;
         font-size: 1.2rem;
+
 
         position: relative;
 

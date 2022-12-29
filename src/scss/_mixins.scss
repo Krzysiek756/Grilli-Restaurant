@@ -85,7 +85,7 @@
 
 
 @mixin rotate-square() {
-    &::after {
+    &::before {
         content: '';
         position: absolute;
         width: 10px;
@@ -100,8 +100,77 @@
         transform: translate(0, 50%) rotate(45deg);
 
 
+        @include xl {
+            display: none;
+        }
+
+
     }
 }
+
+/********************Rotatte Hover image**********************/
+@mixin rotate-hover {
+
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 116%;
+        background-image: url('../img/img-pattern.svg');
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: $transition-2;
+        transition-delay: 0;
+        will-change: transform;
+
+    }
+
+
+    &:is(:hover, :focus-within)::before {
+        transform: rotateY(0.5turn) translateX(50%);
+        transition-delay: 300ms;
+    }
+}
+
+
+
+/********************Shane Hover**********************/
+
+@mixin shane-hover {
+
+    position: relative;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+        transform: skewX(-0.08turn) translateX(-180%);
+        max-width: 360px;
+        z-index: 2;
+
+
+
+    }
+
+    &:is(:hover, :focus-within)::after {
+        transform: skewX(-0.08turn) translateX(275%);
+        transition: $transition-3;
+    }
+}
+
+
 
 
 /********************Hover two lines bottom**********************/
@@ -129,7 +198,10 @@
 
 }
 
-/********************Annimations **********************/
+
+
+
+/********************Max Width Height image **********************/
 
 
 @mixin img-max-wh($object-fit) {

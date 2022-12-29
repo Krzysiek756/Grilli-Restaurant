@@ -491,6 +491,8 @@
                     &:hover {
                         padding-left: unset;
 
+                        @include hover-two-lines(-2px);
+
                     }
 
 
@@ -518,11 +520,17 @@
 
                     position: relative;
                     padding-left: 25px;
+
                     @include rotate-square;
+
+
+
 
                     @include xl {
 
                         padding-left: unset;
+                        @include hover-two-lines(-3px);
+
 
 
 
