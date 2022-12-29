@@ -116,11 +116,11 @@
     &::before {
         position: absolute;
         content: '';
-        top: -8%;
+        top: -6%;
         left: 50%;
         transform: translateX(-50%);
         width: 140px;
-        height: 116%;
+        height: 90%;
         background-image: url('../img/img-pattern.svg');
         z-index: -1;
         background-position: center;
@@ -129,6 +129,11 @@
         transition: $transition-2;
         transition-delay: 0;
         will-change: transform;
+
+
+        @include lg {
+            top: -8%;
+        }
 
     }
 
@@ -158,7 +163,7 @@
         background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
         transform: skewX(-0.08turn) translateX(-180%);
         max-width: 360px;
-        z-index: 2;
+        z-index: 1;
 
 
 
@@ -267,4 +272,20 @@
         }
     }
 
+}
+
+@mixin move {
+    animation: move 5s linear infinite;
+
+    @keyframes move {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+    }
 }

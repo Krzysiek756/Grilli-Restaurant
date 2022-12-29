@@ -436,20 +436,94 @@
 /***************************Section Offers******************************/
 /***************************Section Offers******************************/
 
-
 .offer {
 
+    .container {
+        max-width: 1230px !important;
+    }
+
+    position: relative;
+
+
+    @include lg {
+        &::after {
+            position: absolute;
+            content: url('/assets/img/shape-1.png');
+            bottom: 0;
+            left: 0;
+            z-index: -2;
+
+            @include move;
+
+        }
+
+        &::before {
+            position: absolute;
+            content: url('/assets/img/shape-2.png');
+            top: 0;
+            right: 0;
+            z-index: -2;
+            animation: move 5s linear infinite;
+
+            @include move;
+        }
+    }
+
+
+
+    .section__breaker {
+
+        width: fit-content;
+        @include margin-auto;
+
+        @include xl {
+
+
+            margin: 0 auto;
+
+            transform: translateY(60px)
+        }
+    }
 
 
     &__content {
 
-        @include flex-center(column);
+        overflow: hidden;
+        padding-bottom: 40px;
 
-        overflow-x: hidden;
 
+        @include xl {
+            padding-bottom: 200px;
+        }
 
 
     }
+
+    &__column {
+
+        display: flex;
+        flex-direction: column;
+        column-gap: 40px;
+
+
+
+        @include md {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        @include lg {
+            justify-content: space-between;
+
+        }
+
+
+    }
+
+
+
 
     &__wrapper {
         @include flex-center(column);
@@ -458,9 +532,27 @@
         margin-bottom: 60px;
 
 
+        @include md {
+            width: 360px;
+            justify-content: space-between;
 
+        }
 
+        @include lg {
+            width: 300px;
+        }
 
+        @include xl {
+
+            &:nth-child(2) {
+                transform: translateY(160px)
+            }
+        }
+
+    }
+
+    .bg-patter {
+        @include rotate-hover;
     }
 
 
@@ -477,11 +569,10 @@
         max-width: 388px;
         max-height: 460px;
 
-
-
+        cursor: pointer;
+        overflow: hidden;
 
         img {
-
 
 
             transition: $transition-2;
