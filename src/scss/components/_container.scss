@@ -6,6 +6,88 @@
 
 }
 
+.section__breaker {
+
+    margin: 100px 0;
+
+    @include flex-center;
+    flex-direction: column;
+
+    text-align: center;
+    gap: 20px;
+
+
+
+    .section {
+
+        &__subtitle {
+            color: $gold-crayola;
+            text-transform: uppercase;
+            font-weight: $weight-bold;
+            font-size: 1.3rem;
+            letter-spacing: $letterSpacing-2;
+
+            position: relative;
+
+            margin-bottom: 30px;
+
+            &::after {
+                position: absolute;
+                content: url('../img/separator.svg');
+                display: block;
+                margin: 20px 0;
+                width: 100px;
+
+                @include center(horizontal);
+
+                top: 50%;
+
+
+            }
+        }
+
+
+        &__title {
+            color: $white;
+            font-family: $fontFamily-forum;
+            font-weight: $weight-regular;
+            line-height: $lineHeight-2;
+            font-size: 3.2rem;
+
+            @include md {
+                font-size: 3.9rem;
+            }
+
+            @include lg {
+                font-size: 5.2rem;
+            }
+
+            @include xl {
+                font-size: 6.2rem;
+            }
+        }
+
+        &__p {
+            max-width: 388px;
+
+            color: $white;
+            font-family: $fontFamily-dm_sans;
+            font-size: $fontSize-body-4;
+            font-weight: $weight-regular;
+            line-height: $lineHeight-5;
+
+            @include lg {
+                max-width: 420px;
+
+
+            }
+        }
+
+
+
+    }
+}
+
 
 
 
@@ -28,13 +110,13 @@
 
     position: relative;
 
+    min-height: 700px;
+
 
 
     @include sm {
         margin-top: -54px;
     }
-
-
 
 
 
@@ -57,8 +139,6 @@
         flex-direction: column;
         gap: 20px;
 
-
-
     }
 
 
@@ -69,6 +149,8 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        min-height: 700px;
 
 
         position: absolute;
@@ -109,7 +191,7 @@
         position: absolute;
         z-index: 2;
         bottom: 20px;
-        right: 42px;
+        right: 10px;
         background-color: $gold-crayola;
         height: fit-content;
         width: 120px;
@@ -117,11 +199,7 @@
         padding: 12px;
         transform: scale(0.6);
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
+        @include flex-center;
 
         @include md {
 
@@ -178,9 +256,6 @@
         padding: 125px 0;
 
 
-
-
-
         position: absolute;
         top: 0;
         left: 50%;
@@ -195,9 +270,6 @@
         &.active {
             opacity: 1;
             visibility: visible;
-
-
-
 
 
             //Aniamtion
@@ -353,9 +425,4 @@
 
 
 
-}
-
-.l {
-    margin-top: 00px;
-    background-color: red;
 }
