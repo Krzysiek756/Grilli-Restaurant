@@ -37,9 +37,9 @@
     &__content {
         height: 100vh;
         width: 100vw;
-        @include flex-center;
+        @include flex-center(column);
 
-        flex-direction: column;
+        // flex-direction: column;
 
         transition: $transition-1;
 
@@ -329,7 +329,7 @@
 
 
 
-        @include flex-center;
+        @include flex-center(row);
         justify-content: space-between;
 
     }
@@ -445,6 +445,8 @@
             border-block-end: 1px solid $white-alpha-20;
 
 
+
+
             @include xl {
                 border-block-end: unset;
                 flex-direction: row;
@@ -475,6 +477,7 @@
                     color: $gold-crayola;
                     padding-left: 25px;
                     transition: $transition-1;
+                    @include rotate-square;
 
                 }
 
@@ -487,9 +490,10 @@
 
                     &:hover {
                         padding-left: unset;
+
                     }
 
-                    @include hover-two-lines;
+
 
                     &::after {
                         bottom: -2px;
@@ -509,16 +513,18 @@
 
                 color: $gold-crayola;
 
+
                 a {
 
                     position: relative;
                     padding-left: 25px;
+                    @include rotate-square;
 
                     @include xl {
 
                         padding-left: unset;
 
-                        @include hover-two-lines;
+
 
                         &::after {
                             transform: scaleX(1);
@@ -540,8 +546,8 @@
         }
 
         .navbar__wrapper {
-            @include flex-center;
-            flex-direction: column;
+            @include flex-center(column);
+            // flex-direction: column;
 
             @include xl {
                 display: none;
@@ -614,7 +620,7 @@
                 cursor: pointer;
 
 
-                @include hover-two-lines;
+                @include hover-two-lines(-10px);
 
 
 

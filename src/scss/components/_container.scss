@@ -6,15 +6,18 @@
 
 }
 
+// Section Breaker title 
+
 .section__breaker {
 
     margin: 100px 0;
 
-    @include flex-center;
-    flex-direction: column;
+    @include flex-center(column);
+
 
     text-align: center;
     gap: 20px;
+
 
 
 
@@ -157,7 +160,6 @@
         left: 0;
         top: 0;
 
-
         width: 100%;
         height: 100vh;
 
@@ -199,7 +201,7 @@
         padding: 12px;
         transform: scale(0.6);
 
-        @include flex-center;
+        @include flex-center(column);
 
         @include md {
 
@@ -424,5 +426,57 @@
 
 
 
+
+}
+
+
+
+/***************************Section Offers******************************/
+/***************************Section Offers******************************/
+/***************************Section Offers******************************/
+
+
+.offer {
+
+    &__content {
+
+        @include flex-center(column);
+        gap: 60px;
+
+    }
+
+    &__wrapper {
+        @include flex-center(column);
+        width: 100%;
+
+    }
+
+
+    &__img {
+        margin-bottom: 60px;
+        overflow: hidden;
+
+
+        @include img-max-wh(cover);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        color: $gold-crayola;
+        padding-block-end: 4px;
+        margin-inline: auto;
+        text-transform: uppercase;
+        letter-spacing: $letterSpacing-3;
+        font-weight: $weight-bold;
+        transition: $transition-1;
+        font-size: 1.2rem;
+
+        position: relative;
+
+        @include hover-two-lines(0px);
+    }
 
 }
