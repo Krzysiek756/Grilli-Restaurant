@@ -43,12 +43,41 @@
 
                 @include hover-two-lines(-10px)
             }
+
+            &__price {
+
+                @include flex-center(row);
+                margin-bottom: 30px;
+                gap: 30px;
+
+                font-family: $fontFamily-dm_sans;
+                font-size: 2.2rem;
+                font-weight: $weight-regular;
+                line-height: $lineHeight-5;
+
+                .price {
+
+                    &__inactive {
+                        color: $davys-grey;
+
+                    }
+
+                    &__active {
+                        color: $gold-crayola;
+                        font-size: 2.8rem;
+
+                    }
+                }
+
+            }
         }
     }
 
 
 
     .section {
+
+
 
 
 
@@ -655,9 +684,7 @@
 
     &__content {
 
-        margin-bottom: 180px;
-
-
+        margin-bottom: 220px;
 
 
         @include sm {
@@ -675,8 +702,6 @@
         @include xl {
             margin: 120px 10px 120px 10px;
         }
-
-
 
 
     }
@@ -700,11 +725,7 @@
 
     &__banner {
         position: relative;
-
-
         width: 80%;
-
-
         margin-left: auto;
 
         @include lg {
@@ -720,10 +741,7 @@
             height: 100%;
 
             display: block;
-
             margin-left: auto;
-
-
 
             img {
                 width: 100%;
@@ -746,10 +764,6 @@
 
             position: absolute;
 
-
-
-
-
             bottom: -75px;
             z-index: 4;
             left: -26%;
@@ -770,12 +784,9 @@
                 top: -50px;
                 background-repeat: no-repeat;
 
-
             }
 
             position: absolute;
-
-
 
             @include sm {
                 height: 285px;
@@ -842,9 +853,128 @@
             }
 
 
+        }
+    }
+}
 
+
+/***************************Section Special Dishes******************************/
+/***************************Section Special Dishes******************************/
+/***************************Section Special Dishes******************************/
+
+
+.special {
+
+    background-color: $black-alpha-15;
+
+
+    .container {
+        max-width: unset;
+
+    }
+
+
+
+    &__content {
+        position: relative;
+        margin: 0 -15px;
+
+        border: 2px solid yellow;
+        background-color: $black-alpha-15;
+
+
+        @include lg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
 
         }
+
     }
+
+
+
+    &__bg {
+
+
+        @include img-max-wh(cover);
+
+        background-color: pink;
+
+
+
+        img {
+            background-color: 2px solid pink;
+        }
+
+
+
+
+
+    }
+
+
+    .section {
+
+        &__breaker {
+            border: 2px solid red;
+            background-color: $black-alpha-15;
+
+            @include lg {
+                margin-top: unset;
+                margin-bottom: unset;
+
+
+                text-align: left;
+
+                padding: 100px 60px 100px 60px;
+
+                justify-content: flex-start;
+                align-items: flex-start;
+
+
+
+
+            }
+        }
+
+        &__subtitle {
+
+            @include lg {
+                &::after {
+                    display: block;
+                    margin: 20px 0;
+                    left: 52px;
+                }
+            }
+
+        }
+
+        &__p {
+            max-width: 760px;
+            margin: 0 15px;
+
+            @include lg {
+                margin: 0;
+            }
+        }
+
+        &__icon {
+
+
+            @include lg {
+                position: absolute;
+                left: calc(50% + 10px);
+                top: calc(100px + 14px);
+
+                animation: move 5s linear infinite;
+
+                @include move;
+            }
+
+        }
+
+    }
+
+
 }
