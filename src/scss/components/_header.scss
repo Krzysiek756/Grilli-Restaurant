@@ -118,22 +118,31 @@
     display: none;
 
     @include xl {
-        @include rotate-square;
+
 
         display: flex;
 
         margin: 0 50px;
 
 
-        &::after {
-            transform: translate(50%, 50%) rotate(45deg);
-            left: -10px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 1px solid $gold-crayola;
+
+            transition: $transition-1;
+
+            bottom: 50%;
+            left: 0;
+
+            transform: translate(-50%, 50%) rotate(45deg);
+
+
+
         }
-
-
-
     }
-
 
 }
 

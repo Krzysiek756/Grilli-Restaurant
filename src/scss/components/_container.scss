@@ -19,6 +19,33 @@
     gap: 20px;
 
 
+    .section__contact {
+
+
+        .contact {
+
+
+            &__p {
+                color: $white;
+                font-family: $fontFamily-dm_sans;
+                font-size: $fontSize-body-4;
+                line-height: $lineHeight-5;
+                font-weight: $weight-bold;
+
+            }
+
+            &__phone {
+
+                color: $gold-crayola;
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+
+                @include hover-two-lines(-10px)
+            }
+        }
+    }
+
+
 
     .section {
 
@@ -437,6 +464,8 @@
 /***************************Section Offers******************************/
 
 .offer {
+    background-color: $black-alpha-15;
+
 
     .container {
         max-width: 1230px !important;
@@ -607,4 +636,18 @@
         @include hover-two-lines(0px);
     }
 
+}
+
+
+/***************************Section About******************************/
+/***************************Section About******************************/
+/***************************Section About******************************/
+
+
+.about {
+
+
+
+
+    // &__content {}
 }

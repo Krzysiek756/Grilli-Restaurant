@@ -102,6 +102,8 @@
 
         @include xl {
             display: none;
+
+
         }
 
 
@@ -182,6 +184,9 @@
 
 
 @mixin hover-two-lines($bottom) {
+
+    position: relative;
+
     &::after {
         content: '';
         position: absolute;
