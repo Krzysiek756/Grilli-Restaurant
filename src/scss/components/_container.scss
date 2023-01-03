@@ -151,7 +151,6 @@
 
 
 
-
 /***************************Section Hero******************************/
 /***************************Section Hero******************************/
 /***************************Section Hero******************************/
@@ -167,7 +166,12 @@
     overflow: hidden;
     z-index: 1;
 
-    width: 100%;
+    width: calc(100%);
+    // margin-left: -15px;
+
+
+
+
 
     position: relative;
 
@@ -184,6 +188,8 @@
 
     .container {
         max-width: unset;
+
+
     }
 
 
@@ -215,23 +221,17 @@
 
 
         position: absolute;
-        left: 0;
+        left: -15px;
         top: 0;
 
-        width: 100%;
+        width: calc(100% + 30px);
         height: 100vh;
 
         overflow: hidden;
 
-        max-width: 1880px;
-        max-height: 950px;
-
-        transform: scale(1.15);
-
-        z-index: -1;
 
 
-        @include smoothScale;
+
 
         &--2 {
             background-image: url('../img/hero-slider-2.jpg');
@@ -251,7 +251,7 @@
         position: absolute;
         z-index: 2;
         bottom: 20px;
-        right: 10px;
+        right: 20px;
         background-color: $gold-crayola;
         height: fit-content;
         width: 120px;
@@ -498,7 +498,7 @@
 
 
     .container {
-        max-width: 1230px !important;
+        max-width: 1260px !important;
     }
 
     position: relative;
@@ -676,8 +676,25 @@
 
 .about {
 
+
+    @include xl {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url('/assets/img/shape-3.png');
+            left: calc(0px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+
+
     .container {
-        max-width: 1230px !important;
+        max-width: 1260px !important;
         overflow-x: hidden;
     }
 
@@ -697,6 +714,9 @@
 
             margin: 120px 10px 200px 10px;
 
+            gap: 140px;
+
+
         }
 
         @include xl {
@@ -715,10 +735,14 @@
             align-self: flex-start;
             margin-top: 0;
 
+
+
         }
 
         @include xl {
             width: 40%;
+
+            position: relative;
         }
     }
 
@@ -730,6 +754,7 @@
 
         @include lg {
             width: 55%;
+
         }
 
     }
@@ -868,26 +893,41 @@
     background-color: $black-alpha-15;
 
 
+
+
+
+
     .container {
         max-width: unset;
 
+
     }
-
-
 
     &__content {
         position: relative;
         margin: 0 -15px;
 
-        border: 2px solid yellow;
+
         background-color: $black-alpha-15;
+
 
 
         @include lg {
             display: grid;
             grid-template-columns: 1fr 1fr;
 
+        }
 
+        @include xl {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: url('/assets/img/shape-9.png');
+                right: 0;
+                transform: translateY(50%);
+                bottom: 0;
+            }
         }
 
     }
@@ -902,22 +942,13 @@
         background-color: pink;
 
 
-
-        img {
-            background-color: 2px solid pink;
-        }
-
-
-
-
-
     }
 
 
     .section {
 
         &__breaker {
-            border: 2px solid red;
+
             background-color: $black-alpha-15;
 
             @include lg {
@@ -926,14 +957,34 @@
 
 
                 text-align: left;
-
-                padding: 100px 60px 100px 60px;
-
+                padding-left: 80px;
                 justify-content: flex-start;
                 align-items: flex-start;
 
+                position: relative;
+                align-self: center;
+            }
+
+            @include xl {
+                padding-left: 200px;
+
+                .section__title {
+                    font-size: 7.2rem;
+                }
+
+                gap:50px;
 
 
+
+                &::before {
+                    position: absolute;
+                    content: url('/assets/img/shape-4.png');
+                    right: 0px;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    width: 200px;
+                    height: 200px;
+                }
 
             }
         }
@@ -964,12 +1015,19 @@
 
             @include lg {
                 position: absolute;
-                left: calc(50% + 10px);
-                top: calc(100px + 14px);
+                left: calc(25px);
+                top: calc(0px);
 
                 animation: move 5s linear infinite;
 
                 @include move;
+            }
+
+            @include xl {
+                left: calc(25px + 100px);
+
+
+
             }
 
         }
