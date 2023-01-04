@@ -890,7 +890,7 @@
 
 .special {
 
-    background-color: $black-alpha-15;
+    // background-color: $black-alpha-15;
 
 
 
@@ -918,7 +918,7 @@
 
         }
 
-        @include xl {
+        @include xxl {
             position: relative;
 
             &::before {
@@ -939,7 +939,7 @@
 
         @include img-max-wh(cover);
 
-        background-color: pink;
+
 
 
     }
@@ -953,10 +953,11 @@
             padding-bottom: 80px;
 
 
+
             @include lg {
                 margin-top: unset;
                 margin-bottom: unset;
-                padding-bottom: unset;
+                padding-bottom: 80px;
 
 
                 text-align: left;
@@ -1102,9 +1103,16 @@
         padding-bottom: 80px;
 
 
+
     }
 
+    .section__breaker {
+        margin-top: unset;
 
+        @include lg {
+            margin-top: 100px;
+        }
+    }
 
 
     .menu-d {
@@ -1153,9 +1161,12 @@
             align-items: center;
             gap: 40px;
 
+
             .menu-d__daily {
                 display: flex;
-
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
                 color: $white;
                 font-family: $fontFamily-dm_sans;
                 font-size: 2.0rem;
@@ -1315,4 +1326,98 @@
 
     }
 
+}
+
+
+/***************************Section Testomials******************************/
+/***************************Section Testomials******************************/
+/***************************Section Testomials******************************/
+
+
+.testimonials {
+
+    background-image: url('../img/testimonial-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+    @include xl {
+        height: 100vh;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+    }
+
+    &__qoute {
+
+        font-size: 7rem;
+        font-family: $fontFamily-forum;
+
+    }
+
+    &__title {
+        color: $white;
+        font-family: $fontFamily-forum;
+        font-weight: $weight-regular;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+
+        @include md {
+            font-size: 3.2rem;
+            line-height: 4rem;
+        }
+
+        @include lg {
+            font-size: 5.2rem;
+            line-height: 9rem;
+        }
+    }
+
+    &__separator {
+
+        display: flex;
+        gap: 5px;
+
+
+
+        span {
+            width: 12px;
+            height: 12px;
+            border: 1px solid $gold-crayola;
+
+            animation: rotate360 15s linear infinite;
+
+        }
+    }
+
+    &__img {
+
+        @include img-max-wh(cover);
+
+
+        border-radius: 50%;
+
+        margin-bottom: 30px;
+
+        img {
+            border-radius: inherit;
+        }
+    }
+
+    &__name {
+        color: $gold-crayola;
+        font-weight: $weight-bold;
+        text-transform: uppercase;
+        letter-spacing: $letterSpacing-3;
+    }
 }
