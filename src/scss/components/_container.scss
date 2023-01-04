@@ -949,11 +949,14 @@
 
         &__breaker {
 
-            background-color: $black-alpha-15;
+
+            padding-bottom: 80px;
+
 
             @include lg {
                 margin-top: unset;
                 margin-bottom: unset;
+                padding-bottom: unset;
 
 
                 text-align: left;
@@ -963,10 +966,14 @@
 
                 position: relative;
                 align-self: center;
+
+                margin: 80px 0;
             }
 
             @include xl {
                 padding-left: 200px;
+
+                margin: unset;
 
                 .section__title {
                     font-size: 7.2rem;
@@ -1034,5 +1041,242 @@
 
     }
 
+
+}
+
+
+/***************************Section Menu******************************/
+/***************************Section Menu******************************/
+/***************************Section Menu******************************/
+
+
+.menu {
+
+
+    .container {
+        max-width: 1260px !important;
+        overflow-x: hidden;
+
+    }
+
+
+    &__content {
+
+        margin: 0 5px;
+        padding-bottom: 80px;
+
+
+    }
+
+
+
+
+    .menu {
+
+        &__dishes {
+
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            margin-bottom: 80px;
+
+
+            @include lg {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 80px;
+                row-gap: 40px;
+            }
+
+            @include xl {
+                gap: 120px;
+                row-gap: 60px;
+            }
+
+            position: relative;
+
+
+            @include xl {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 0%;
+                    background-color: $davys-grey;
+                    height: 100%;
+                    width: 1px;
+
+                }
+            }
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            .menu__daily {
+                display: flex;
+
+                color: $white;
+                font-family: $fontFamily-dm_sans;
+                font-size: 2.0rem;
+                font-weight: $weight-regular;
+                line-height: $lineHeight-5;
+                gap: 10px;
+
+                span {
+                    color: $gold-crayola;
+
+                }
+            }
+        }
+
+
+        &__wrapper {
+
+            display: flex;
+            gap: 20px;
+
+            @include sm {
+                align-items: center;
+            }
+
+            @include lg {
+                width: calc(50% - 40px);
+
+
+            }
+
+
+            @include xl {
+                width: calc(50% - 60px);
+
+
+            }
+
+
+
+            .card {
+
+                &__top {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    @include sm {
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        gap: 15px;
+
+                    }
+
+                }
+
+                &__title {
+                    cursor: pointer;
+                    font-family: $fontFamily-forum;
+                    font-weight: $weight-regular;
+                    line-height: $lineHeight-2;
+                    transition: $transition-2;
+
+                    &:hover {
+                        color: $gold-crayola;
+                        transition: $transition-2;
+                    }
+
+                }
+
+                &__label {
+                    font-weight: $weight-regular;
+                    background-color: $gold-crayola;
+                    color: $eerie-black-1;
+                    font-family: $fontFamily-forum;
+                    text-transform: uppercase;
+                    padding-inline: 10px;
+                    line-height: 20px;
+                    width: fit-content;
+
+
+
+                }
+
+                &__price {
+                    color: $gold-crayola;
+                    font-family: $fontFamily-forum;
+                    font-weight: $weight-regular;
+                    font-size: $fontSize-title-2;
+                    margin-bottom: 10px;
+
+                    @include sm {
+                        margin-bottom: 0;
+                        margin-left: auto;
+
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        position: relative;
+
+
+                        &::before {
+                            content: '';
+                            border-block: 1px solid $white-alpha-20;
+                            flex-grow: 1;
+                            height: 6px;
+
+
+                        }
+                    }
+
+
+                }
+
+                &__text {
+                    color: $quick-silver;
+                    font-size: 1.4rem;
+
+                    @include md {
+                        font-size: 1.6rem;
+                    }
+
+
+                }
+            }
+
+        }
+
+        &__img {
+            @include img-max-wh(cover);
+
+            overflow: hidden;
+            border-radius: 30px;
+
+            max-width: 120px;
+            max-height: 120px;
+
+
+            img {
+                transform: scale(1.0);
+                transition: $transition-1;
+
+                &:hover {
+                    transition: $transition-1;
+                    transform: scale(1.05);
+
+                }
+
+            }
+
+
+        }
+
+
+
+
+    }
 
 }
