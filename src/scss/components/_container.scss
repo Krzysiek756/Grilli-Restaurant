@@ -1050,7 +1050,7 @@
 /***************************Section Menu******************************/
 
 
-.menu {
+.menu-d {
 
 
     .container {
@@ -1058,6 +1058,42 @@
         overflow-x: hidden;
 
     }
+
+    position: relative;
+
+    @include xl {
+        &::before {
+            position: absolute;
+            content: url('/assets/img/shape-5.png');
+            top: 0;
+            left: 0;
+            max-width: max-content;
+            z-index: -1;
+
+
+            @include move;
+
+            transform: scale(0.5);
+
+
+        }
+
+        &::after {
+            position: absolute;
+            content: url('/assets/img/shape-6.png');
+            bottom: 0;
+            right: 0;
+            max-width: max-content;
+            z-index: -1;
+
+
+            @include move;
+
+            transform: scale(0.5);
+        }
+    }
+
+
 
 
     &__content {
@@ -1071,7 +1107,7 @@
 
 
 
-    .menu {
+    .menu-d {
 
         &__dishes {
 
@@ -1117,7 +1153,7 @@
             align-items: center;
             gap: 40px;
 
-            .menu__daily {
+            .menu-d__daily {
                 display: flex;
 
                 color: $white;
