@@ -206,7 +206,7 @@
                                     span.text.text-1 View All Menu
                                     span.text.text-2(aria-hidden='true') View All Menu    
         
-
+// Section Testimonials
 .testimonials
     .container 
         .row 
@@ -221,6 +221,61 @@
                     .testimonials__profile 
                         .testimonials__img 
                              img(src="./assets/img/testi-avatar.jpg", alt="")
-                        p.testimonials__name SAM JHONSON                                                                           
+                        p.testimonials__name SAM JHONSON                                                            
+//Section Contact
 
-                            
+.contact
+    .container 
+        .row 
+            .col-12.col-lg-12 
+                .contact__content 
+                    .contact__form 
+                        form.form(action="") 
+                            h3.form__title Online Reservation
+                            p.form__text
+                                | Booking request
+                                a(href="")  +88-123-123456 
+                                | or fill out the order form 
+                            .input-wrapper    
+                                input.form__input(type='text' name='name' placeholder='Your Name' autocomplete='off')
+                                input.form__input(type='text' name='name' placeholder='Phone Number' autocomplete='off') 
+                            .icon-wrapper
+                                i.ri-user-line     
+                                select.form__input(name='person')
+                                    option(value='1-person') 1 Person
+                                    option(value='2-person') 2 Person
+                                    option(value='3-person') 3 Person
+                                    option(value='4-person') 4 Person
+                                    option(value='5-person') 5 Person
+                                    option(value='6-person') 6 Person
+                                    option(value='7-person') 7 Person
+                                i.ri-arrow-down-s-fil    
+                            .icon-wrapper
+                                i.ri-calendar-line
+                                input.form__input(type='date' name='reservation-date')
+                                i.ri-arrow-down-s-fil    
+                            .icon-wrapper    
+                                i.ri-time-line
+                                select.form__input(name='person')
+                                    option(value='08:00am') 08 : 00 am
+                                    option(value='09:00am') 09 : 00 am
+                                    option(value='010:00am') 10 : 00 am
+                                    option(value='011:00am') 11 : 00 am
+                                    option(value='012:00am') 12 : 00 am
+                                    option(value='01:00pm') 01 : 00 pm
+                                    option(value='02:00pm') 02 : 00 pm
+                                    option(value='03:00pm') 03 : 00 pm
+                                    option(value='04:00pm') 04 : 00 pm
+                                    option(value='05:00pm') 05 : 00 pm
+                                    option(value='06:00pm') 06 : 00 pm
+                                    option(value='07:00pm') 07 : 00 pm
+                                    option(value='08:00pm') 08 : 00 pm
+                                    option(value='09:00pm') 09 : 00 pm
+                                    option(value='10:00pm') 10 : 00 pm
+                                i.ri-arrow-down-s-fil   
+                            .input-wrapper  
+                                 textarea.form__input(name='message' placeholder='Message' autocomplete='off')        
+                                                        
+
+
+                                                                                                
