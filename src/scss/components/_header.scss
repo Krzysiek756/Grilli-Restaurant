@@ -574,7 +574,7 @@
         .navbar {
 
             &__title {
-                font-size: 30px;
+                font-size: 3rem;
                 font-family: $fontFamily-forum cursive;
 
                 margin-bottom: 20px;
@@ -605,9 +605,10 @@
                     transition: $transition-1;
                 }
 
+                @include rotate-square;
 
 
-                &::after {
+                &::before {
                     bottom: -40px;
                     left: 50%;
                     margin: 0 auto;
