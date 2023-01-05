@@ -1433,3 +1433,154 @@
         letter-spacing: $letterSpacing-3;
     }
 }
+
+
+/***************************Section Contact******************************/
+/***************************Section Contact******************************/
+/***************************Section Contact******************************/
+
+
+.contact {
+
+    &__content {}
+
+
+    &__form {
+        border: 2px solid red;
+
+        padding: 40px 20px;
+
+        background-color: $black-alpha-80;
+
+    }
+
+    .form {
+
+        &__title {
+            color: $white;
+            font-family: $fontFamily-forum;
+            font-weight: $weight-regular;
+            line-height: $lineHeight-2;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            color: $white;
+            font-family: $fontFamily-dm_sans;
+            font-size: 1.8rem;
+            font-weight: $weight-regular;
+            line-height: $lineHeight-5;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 40px;
+
+
+            a {
+                color: $gold-crayola;
+                margin-left: 5px;
+            }
+        }
+
+
+        .btn {
+            max-width: 100%;
+            align-items: center;
+        }
+
+
+
+
+    }
+
+    .form__input {
+        background-color: $eerie-black-2;
+        color: $white;
+        height: 56px;
+        padding: 10px 20px 10px 40px;
+        border: 1px solid $white-alpha-10;
+        margin-block-end: 20px;
+        outline: none;
+        transition: border-color $transition-2;
+
+        cursor: pointer;
+
+
+        -webkit-appearance: none; // dealete arrow
+        -moz-appearance: none;
+
+
+
+        &:focus {
+            border: 3px solid $gold-crayola;
+        }
+
+        &--data {
+            text-transform: uppercase;
+            padding-inline-end: 10px;
+            cursor: pointer;
+
+            &::-webkit-calendar-picker-indicator {
+                opacity: 0;
+                width: 80%;
+            }
+        }
+
+        &--textarea {
+
+            max-width: 100%;
+            min-height: 200px;
+            height: 100%;
+            width: 100%;
+            resize: none;
+        }
+    }
+
+
+    .input-wrapper {
+
+        ::placeholder {
+            color: inherit;
+        }
+
+    }
+
+    .icon-wrapper {
+
+        position: relative;
+
+
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6rem;
+
+
+            &:first-child {
+                left: 15px;
+            }
+
+
+            &:last-child {
+                right: 10px;
+            }
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+}

@@ -249,11 +249,11 @@
                                     option(value='5-person') 5 Person
                                     option(value='6-person') 6 Person
                                     option(value='7-person') 7 Person
-                                i.ri-arrow-down-s-fil    
+                                i.ri-arrow-down-s-fill    
                             .icon-wrapper
                                 i.ri-calendar-line
-                                input.form__input(type='date' name='reservation-date')
-                                i.ri-arrow-down-s-fil    
+                                input.form__input.form__input--data(type='date' name='reservation-date')
+                                i.ri-arrow-down-s-fill     
                             .icon-wrapper    
                                 i.ri-time-line
                                 select.form__input(name='person')
@@ -272,9 +272,12 @@
                                     option(value='08:00pm') 08 : 00 pm
                                     option(value='09:00pm') 09 : 00 pm
                                     option(value='10:00pm') 10 : 00 pm
-                                i.ri-arrow-down-s-fil   
+                                i.ri-arrow-down-s-fill   
                             .input-wrapper  
-                                 textarea.form__input(name='message' placeholder='Message' autocomplete='off')        
+                                 textarea.form__input.form__input--textarea(name='message' placeholder='Message' autocomplete='off') 
+                            .btn.btn--header
+                                    span.text.text-1 Book a Table
+                                    span.text.text-2(aria-hidden='true') Book a Table        
                                                         
 
 
