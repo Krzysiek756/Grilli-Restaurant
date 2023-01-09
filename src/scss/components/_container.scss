@@ -1933,7 +1933,6 @@
         margin: 0 5px;
         padding-bottom: 100px;
 
-
     }
 
     &__column {
@@ -1971,9 +1970,17 @@
         }
 
         @include lg {
-            width: calc(33% - 30px);
+            width: calc(33% - 20px);
 
         }
+
+
+        @include xl {
+            width: calc(33% - 16px);
+
+        }
+
+
 
 
         position: relative;

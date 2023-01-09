@@ -1,0 +1,26 @@
+/***************************Section Footer******************************/
+/***************************Section Footer******************************/
+/***************************Section Footer******************************/
+
+.footer {
+
+    background-image: url('../img/testimonial-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    .container {
+        max-width: 1260px !important;
+
+
+    }
+
+
+    &__content {
+
+        margin: 0 5px;
+
+
+    }
+}
