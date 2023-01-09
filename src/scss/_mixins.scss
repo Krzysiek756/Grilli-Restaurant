@@ -229,6 +229,28 @@
 }
 
 
+@mixin img-scale {
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+
+
+        transition: $transition-2;
+        transform: scale(1);
+
+        &:hover {
+            transition: $transition-2;
+
+            transform: scale(1.05);
+        }
+
+    }
+}
+
+
+
+
 
 /********************Annimations **********************/
 
