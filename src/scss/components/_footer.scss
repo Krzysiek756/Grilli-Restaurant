@@ -20,6 +20,22 @@
     &__content {
 
         margin: 0 5px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        margin-bottom: 60px;
+
+        @include md {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include lg {
+            gap: 10px;
+            justify-content: space-between;
+        }
     }
 
     //Footer Wrapper Top
@@ -32,6 +48,16 @@
         padding: 50px 40px;
         position: relative;
         overflow: hidden;
+
+        @include md {
+            width: 100%;
+        }
+
+        @include lg {
+            // width: calc(33% - 20px);
+            flex-basis: calc(50% - 40px);
+
+        }
 
 
         &::after,
@@ -182,46 +208,72 @@
     }
 
 
+    //Footer Table
+
+    &__table {
 
 
+        @include flex-center(column);
+        gap: 20px;
+
+
+        @include md {
+
+            width: calc(50% - 20px);
+        }
+
+        @include lg {
+            // width: calc(33% - 30px);
+            flex-basis: 25%;
+
+        }
+
+
+
+    }
+
+    &__list {
+
+        @include hover-two-lines(0px);
+    }
+
+
+
+    //Footer bottom
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+
+
+        font-family: $fontFamily-dm_sans;
+        font-size: $fontSize-body-4;
+        font-weight: $weight-regular;
+        color: $quick-silver;
+
+
+        span {
+            color: $gold-crayola;
+
+        }
+    }
+
+
+    // Order Element
+    .first {
+        order: 2;
+
+    }
+
+    .second {
+        order: 1;
+
+    }
+
+    .last {
+        order: 3;
+    }
 }
-
-
-
-// .form__input {
-//     background-color: $eerie-black-2;
-//     color: $white;
-//     border: 3px;
-//     // outline: none;
-//     transition: border-color $transition-2;
-//     font-size: 20px;
-
-//     cursor: pointer;
-
-//     margin-bottom: 20px;
-
-
-
-
-
-//     color: $white  !important;
-//     position: relative;
-
-//     ::placeholder {
-//         color: $white;
-//         padding: 10px 20px 10px 40px;
-//     }
-
-//     :focus {
-//         border: 3px solid $gold-crayola;
-//     }
-
-
-//     i {
-//         position: absolute;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         left: 15px;
-//         font-size: 18px;
-//     }
-// }
