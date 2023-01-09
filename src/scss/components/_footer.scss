@@ -117,14 +117,7 @@
         }
     }
 
-    .form {
 
-        &__wrapper {
-            border: 2px solid red;
-            background-color: transparent;
-
-        }
-    }
 
 
     .btn {
@@ -132,37 +125,103 @@
     }
 
 
-    .form__input {
-        background-color: $eerie-black-2;
-        color: $white;
-        padding: 10px 20px 10px 15px;
-        border: 1px solid $white-alpha-10;
-        outline: none;
-        transition: border-color $transition-2;
+    //Form
 
-        cursor: pointer;
-
-        margin-bottom: 20px;
-
-
-        // -webkit-appearance: none; // dealete arrow
-        // -moz-appearance: none;
+    .form__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
         position: relative;
 
+        @include sm {
+            gap: 0;
+            flex-direction: row;
+        }
 
-        &:focus {
-            border: 3px solid $gold-crayola;
+
+
+        .form__input {
+            background-color: $eerie-black-2;
+            color: $white;
+            padding: 14px 20px 14px 40px;
+            font-size: 20px;
+            border: 1px solid $davys-grey;
+            cursor: pointer;
+
+            transition: $transition-2;
+
+            &::placeholder {
+                color: $white;
+            }
+
+            input {
+                color: $white;
+            }
+
+            &:focus {
+                border: 1px solid $gold-crayola;
+            }
+
+
+        }
+
+        .icon__input {
+            position: relative;
         }
 
         i {
             position: absolute;
+            left: 10px;
             top: 50%;
-            transform: translateY(50%);
-            z-index: 2;
+            transform: translateY(-50%);
+            font-size: 18px;
+
         }
+
     }
 
 
 
+
 }
+
+
+
+// .form__input {
+//     background-color: $eerie-black-2;
+//     color: $white;
+//     border: 3px;
+//     // outline: none;
+//     transition: border-color $transition-2;
+//     font-size: 20px;
+
+//     cursor: pointer;
+
+//     margin-bottom: 20px;
+
+
+
+
+
+//     color: $white  !important;
+//     position: relative;
+
+//     ::placeholder {
+//         color: $white;
+//         padding: 10px 20px 10px 40px;
+//     }
+
+//     :focus {
+//         border: 3px solid $gold-crayola;
+//     }
+
+
+//     i {
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         left: 15px;
+//         font-size: 18px;
+//     }
+// }
