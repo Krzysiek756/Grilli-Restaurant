@@ -4,7 +4,7 @@
 
 .footer {
 
-    background-image: url('../img/testimonial-bg.jpg');
+    background-image: url('../img/footer-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,7 +20,80 @@
     &__content {
 
         margin: 0 5px;
+    }
 
+    //Footer Wrapper Top
+
+    &__top {
+        background-image: url('../img/footer-form-bg.png');
+        background-color: #010102;
+        background-position: center top;
+        background-repeat: repeat;
+        padding: 50px 40px;
+        position: relative;
+        overflow: hidden;
+
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: url('../img/footer-form-pattern.svg');
+            width: 15px;
+            height: 100%;
+            top: 0;
+        }
+
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+
+            right: 0;
+        }
+
+        @include flex-center(column);
+        text-align: center;
+        margin: 0 auto;
 
     }
+
+
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__p,
+    &__link,
+    &__phone {
+        color: $quick-silver;
+        line-height: $lineHeight-3;
+        font-size: 1.7rem;
+        margin-bottom: 6px;
+    }
+
+    &__link,
+    &__phone {
+
+        transition: $transition-2;
+        cursor: pointer;
+
+        &:hover {
+            transition: $transition-2;
+            color: $gold-crayola;
+        }
+    }
+
+    .testimonials__separator {
+
+        margin: 50px auto;
+        justify-content: center;
+
+    }
+
+
+
+
 }
