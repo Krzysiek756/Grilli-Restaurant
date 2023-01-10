@@ -255,12 +255,20 @@
     //Footer bottom
 
     &__bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
 
-        padding-bottom: 120px;
+
+        @include md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        text-align: center;
+
+        padding-bottom: 100px;
+
+
 
 
 
@@ -270,8 +278,10 @@
         color: $quick-silver;
 
 
+
         span {
             color: $gold-crayola;
+
 
         }
     }

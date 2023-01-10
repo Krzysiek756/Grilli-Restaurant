@@ -299,11 +299,13 @@
     &.hide {
         transform: translateY(-100%);
         transition-delay: 250ms;
+
     }
 
     &.active {
         background-color: $eerie-black-4;
         border-color: $black-alpha-15;
+
 
 
         .header__content {
@@ -341,6 +343,10 @@
 
     }
 
+    &.scroll {
+        background-color: red;
+    }
+
 
     .menu {
         position: fixed;
@@ -348,6 +354,9 @@
         left: -320px;
         height: 100vh;
         width: 320px;
+
+
+
         background-color: $smoky-black-1;
 
         padding: 60px 30px;
@@ -356,6 +365,7 @@
         flex-direction: column;
         transition: $transition-2;
         z-index: 10;
+
 
         overflow-y: scroll;
 
@@ -385,7 +395,8 @@
 
         &.active {
             transition: $transition-2;
-            transform: translateX(320px);
+            transform: translate(320px, 0);
+
 
             @include sm {
                 transform: translateX(360px);
@@ -637,9 +648,6 @@
 
 
                 @include hover-two-lines(-10px);
-
-
-
 
 
 

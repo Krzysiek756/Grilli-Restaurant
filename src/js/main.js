@@ -40,6 +40,17 @@ const togglerNavbar = function () {
     overlay.classList.toggle('active');
     document.body.classList.toggle('nav-active');
 
+
+    // window.scrollY = 0; ////////////??
+
+
+    window.addEventListener("scroll", function () {
+
+
+        hideHeader(); ///????
+
+    });
+
 }
 
 
