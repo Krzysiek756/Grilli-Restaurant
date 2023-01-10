@@ -10,6 +10,9 @@
     background-repeat: no-repeat;
 
 
+
+
+
     .container {
         max-width: 1260px !important;
 
@@ -56,7 +59,7 @@
         @include lg {
             // width: calc(33% - 20px);
             flex-basis: calc(50% - 40px);
-
+            padding-top: 120px;
         }
 
 
@@ -148,6 +151,12 @@
 
     .btn {
         max-width: unset;
+        align-items: center;
+
+
+        @include lg {
+            width: 50%;
+        }
     }
 
 
@@ -194,6 +203,10 @@
 
         .icon__input {
             position: relative;
+
+            @include lg {
+                width: 50%;
+            }
         }
 
         i {
@@ -247,6 +260,8 @@
         align-items: center;
         gap: 10px;
 
+        padding-bottom: 120px;
+
 
 
         font-family: $fontFamily-dm_sans;
@@ -276,4 +291,26 @@
     .last {
         order: 3;
     }
+}
+
+
+
+//Back to Top Btn
+
+.back-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: $gold-crayola;
+    color: $black;
+    font-size: 28px;
+    padding: 14px;
+    border-radius: 50%;
+
+
+    .active {
+        opacity: 1;
+        visibility: visible;
+    }
+
 }

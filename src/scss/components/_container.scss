@@ -676,6 +676,7 @@
 
 .about {
 
+    scroll-margin-top: 40px;
 
     @include xl {
         position: relative;
@@ -1446,7 +1447,7 @@
 
 
 .contact {
-
+    scroll-margin: 300px;
 
 
     @include xl {
